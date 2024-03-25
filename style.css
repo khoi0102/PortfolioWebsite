@@ -1,0 +1,48 @@
+*{
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+
+}
+h2{
+
+}
+h3{
+    font-weight: normal;
+}
+
+body{
+    margin: 0px;
+}
+.nav{
+    font-weight: normal;
+}
+a:link {
+    text-decoration: none;
+    color:black;
+}
+.header-nav-list{
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    align-items: center;
+}
+.name{
+    font-size: 70px;
+}
+.header-nav{
+    background-color: antiquewhite;
+}
+.background{
+    margin-top: 30px;
+    margin-left: 50px;
+    padding-left: 50px;
+    padding-right: 10px;
+    border: 1px solid black;
+    width: 50%;
+    height: 700px;
+    border-radius: 5%;
+    background-image: url("Sleek+Objects+1.jpg");
+    color:white;
+    background-size: cover;
+
+}
