@@ -57,9 +57,9 @@ a:link, a:visited, a:hover, a:active, a:focus  {
 
 }
 #link, #git {
-    font-size: 30px; /* Adjust size as needed */
-    color: black; /* Or any other color */
-    margin: 0 5px; /* Space out the icons */
+    font-size: 30px;
+    color: black;
+    margin: 0 5px;
 }
 .profile-picture {
     margin-top: 30px;
@@ -68,13 +68,13 @@ a:link, a:visited, a:hover, a:active, a:focus  {
     background-image: url("1707199387182.jpg");
     border-radius: 50%;
     height: 160px;
-    width: 160px; /* Adjusted to match the height for a perfect circle */
+    width: 160px;
     margin-right: 100px;
-    position: relative; /* Needed for absolute positioning of children */
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Stack children vertically */
+    flex-direction: column;
 }
 .organize{
     display: flex;
@@ -84,22 +84,22 @@ a:link, a:visited, a:hover, a:active, a:focus  {
 .social-icons {
     display: flex;
     justify-content: center;
-    width: 100%; /* Match the width of the profile-picture container */
-    margin-top: 550px; /* Add space between picture and icons */
+    width: 100%;
+    margin-top: 550px;
 }
 .circle-animation {
     position: absolute;
-    top: -2px; /* Adjust the position as needed */
+    top: -2px;
     left: -2px;
-    width: calc(100% + 4px); /* Adjust width to fit outside the image */
-    height: calc(100% + 4px); /* Adjust height to fit outside the image */
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
     border-radius: 50%;
     border: 2px solid transparent;
     animation: rotate-border 2s linear infinite;
     background-image: linear-gradient(white, white), conic-gradient(red, blue);
     background-origin: border-box;
     background-clip: content-box, border-box;
-    z-index: -1; /* Put the animation behind the image */
+    z-index: -1;
 }
 @keyframes rotate-border {
     0% {
@@ -113,7 +113,7 @@ a:link, a:visited, a:hover, a:active, a:focus  {
     display: flex;
     margin-top: 20px;
     justify-content: space-between;
-    width: 500px;
+    width: 350px;
     font-size: 15px;
     align-content: center;
     align-items: center;
@@ -123,18 +123,19 @@ a:link, a:visited, a:hover, a:active, a:focus  {
     border-radius: 50px;
     background-color: antiquewhite;
     animation: slideInLeft 1s ease forwards;
-
-
+    flex-wrap: wrap;
 }
 .contact-me{
-    width:500px;
+    width:350px;
     border: 1px solid black;
     padding: 20px;
     border-radius: 50px;
     background-color: antiquewhite;
     animation: slideInLeft 1s ease forwards;
+    flex-wrap: wrap;
 
 }
+
 
 #contact-me{
     display: flex;
@@ -153,9 +154,8 @@ justify-content: center;
 }
 #portfolio {
     text-align: center;
-    background-color: #f2f2f2; /* Light grey background */
+    background-color: #f2f2f2;
     padding: 20px;
-    margin-top: 30px;
     display: block;
     align-items: center;
     align-content: center;
@@ -204,4 +204,115 @@ justify-content: center;
 }
 .project-title{
     font-size: 50px;
+}
+.footer {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.footer-text {
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 0;
+
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+}
+footer.footer{
+    height: 100px;
+    color:black;
+}
+.footer.icon{
+    display: flex;
+    justify-content: space-between;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body {
+    animation: fadeIn 2s ease-out;
+}
+.header-nav-list a {
+    position: relative;
+    overflow: hidden;
+}
+
+.header-nav-list a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-nav-list a:hover::after {
+    transform: translateX(0);
+}
+.portfolio-item {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.portfolio-item.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+.social-icons a:hover {
+    transform: rotate(360deg);
+    transition: transform 0.5s ease-in-out;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.social-icons a,.footer-icon {
+    display: inline-block;
+    animation: pulse 2s infinite;
+}
+.footer-icon{
+    font-size: 30px;
+}
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.organize {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
 }
