@@ -9,7 +9,9 @@ h2{
 h3{
     font-weight: normal;
 }
-
+.intro{
+    font-size: 50px;
+}
 body{
     margin: 0px;
 }
@@ -18,13 +20,15 @@ body{
 }
 a:link {
     text-decoration: none;
-    color:black;
+    color: black;
 }
 .header-nav-list{
     display: flex;
     justify-content: space-around;
     font-size: 20px;
     align-items: center;
+    font-weight: bold;
+
 }
 .name{
     font-size: 70px;
@@ -44,5 +48,89 @@ a:link {
     background-image: url("Sleek+Objects+1.jpg");
     color:white;
     background-size: cover;
+    box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
 
+
+}
+#link, #git {
+    font-size: 30px; /* Adjust size as needed */
+    color: black; /* Or any other color */
+    margin: 0 5px; /* Space out the icons */
+}
+.profile-picture {
+    margin-top: 30px;
+    border: 1px solid black;
+    background-size: cover;
+    background-image: url("1707199387182.jpg");
+    border-radius: 50%;
+    height: 160px;
+    width: 160px; /* Adjusted to match the height for a perfect circle */
+    margin-right: 100px;
+    position: relative; /* Needed for absolute positioning of children */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack children vertically */
+}
+.organize{
+    display: flex;
+    justify-content: space-around;
+    gap: 60px;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Match the width of the profile-picture container */
+    margin-top: 550px; /* Add space between picture and icons */
+}
+.circle-animation {
+    position: absolute;
+    top: -2px; /* Adjust the position as needed */
+    left: -2px;
+    width: calc(100% + 4px); /* Adjust width to fit outside the image */
+    height: calc(100% + 4px); /* Adjust height to fit outside the image */
+    border-radius: 50%;
+    border: 2px solid transparent;
+    animation: rotate-border 2s linear infinite;
+    background-image: linear-gradient(white, white), conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    z-index: -1; /* Put the animation behind the image */
+}
+@keyframes rotate-border {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.tech-slack{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    width: 500px;
+    font-size: 15px;
+    align-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: antiquewhite;
+
+
+}
+.contact-me{
+    width:500px;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: antiquewhite;
+
+}
+
+#contact-me{
+    display: flex;
+justify-content: center;
 }
