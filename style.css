@@ -18,7 +18,7 @@ body{
 .nav{
     font-weight: normal;
 }
-a:link {
+a:link, a:visited, a:hover, a:active, a:focus  {
     text-decoration: none;
     color: black;
 }
