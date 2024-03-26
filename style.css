@@ -92,7 +92,7 @@ a:link {
     border-radius: 50%;
     border: 2px solid transparent;
     animation: rotate-border 2s linear infinite;
-    background-image: linear-gradient(white, white), conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+    background-image: linear-gradient(white, white), conic-gradient(red, blue);
     background-origin: border-box;
     background-clip: content-box, border-box;
     z-index: -1; /* Put the animation behind the image */
