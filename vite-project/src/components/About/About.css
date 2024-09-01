@@ -1,0 +1,141 @@
+.organize {
+    background-color: #f2f2f2;
+    height: 800px;
+    display: flex;
+    justify-content: space-around;
+    gap: 60px;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+.background {
+    margin-top: 30px;
+    margin-left: 50px;
+    padding-left: 50px;
+    padding-right: 10px;
+    border: 1px solid black;
+    width: 50%;
+    height: 700px;
+    border-radius: 5%;
+    background-image: url("Sleek+Objects+1.jpg");
+    color: white;
+    background-size: cover;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.intro {
+    font-size: 50px;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+.profile-picture {
+    margin-top: 30px;
+    border: 1px solid black;
+    background-size: cover;
+    background-image: url("1707199387182.jpg");
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    margin-right: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 550px;
+}
+
+#link, #git {
+    font-size: 30px;
+    color: black;
+    margin: 0 5px;
+}
+
+.circle-animation {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: 50%;
+    border: 2px solid transparent;
+    animation: rotate-border 2s linear infinite;
+    background-image: linear-gradient(white, white), conic-gradient(red, blue);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    z-index: -1;
+}
+
+@keyframes rotate-border {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.tech-slack {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    width: 350px;
+    font-size: 15px;
+    align-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: antiquewhite;
+    animation: slideInLeft 1s ease forwards;
+    flex-wrap: wrap;
+    color:black;
+
+}
+
+.contact-me {
+    width: 350px;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: antiquewhite;
+    animation: slideInLeft 1s ease forwards;
+    flex-wrap: wrap;
+    color:black;
+
+}
+
+#contact-me {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    color:black;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

@@ -1,0 +1,70 @@
+#portfolio {
+    text-align: center;
+    background-color: #f2f2f2;
+    display: block;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    color: black;
+    padding: 20px 20px 40px;
+}
+
+.portfolio-item {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start */
+    align-items: flex-start; /* Align content to the top */
+    margin-top: 20px;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    gap: 20px; /* Add some space between image and content */
+    margin-left:40px;
+
+}
+
+.portfolio-item.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.portfolio-image img {
+    width: 100%; /* Make sure images take full width of the container */
+    max-width: 500px; /* Ensure consistent image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    object-fit: cover; /* Ensure the image fits well */
+}
+
+.portfolio-content {
+    max-width: 60%; /* Ensure content does not overflow */
+    margin-left: 20px;
+    text-align: left;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #eaeaea;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.portfolio-links a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    transition: background-color 0.3s;
+}
+
+.portfolio-links a:hover {
+    background-color: #eaeaea;
+}
+
+.project-title {
+    font-size: 50px;
+}

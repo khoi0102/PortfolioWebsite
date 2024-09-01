@@ -1,0 +1,44 @@
+.header-nav {
+    background-color: antiquewhite;
+}
+
+.header-nav-list {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    align-items: center;
+    font-weight: bold;
+}
+
+.name {
+    font-size: 70px;
+}
+
+.nav {
+    font-weight: normal;
+}
+
+a:link, a:visited, a:hover, a:active, a:focus {
+    text-decoration: none;
+    color: black;
+}
+
+.header-nav-list a {
+    position: relative;
+    overflow: hidden;
+}
+
+.header-nav-list a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-nav-list a:hover::after {
+    transform: translateX(0);
+}
